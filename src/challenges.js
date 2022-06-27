@@ -18,8 +18,11 @@ function splitSentence(string1) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayString) {
+  // eslint-disable-next-line prefer-template , no-undef
+  stringNova = arrayString[arrayString.length - 1] + ', ' + arrayString[0];
+  // eslint-disable-next-line no-undef
+  return stringNova;
 }
 
 // Desafio 5
