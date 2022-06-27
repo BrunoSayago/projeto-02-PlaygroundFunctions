@@ -1,5 +1,5 @@
 // Desafio 11
-// eslint-disable-next-line max-lines-per-function , complexity , sonarjs/cognitive-complexity
+// eslint-disable-next-line complexity , sonarjs/cognitive-complexity
 function generatePhoneNumber(arrayInt) {
   if (arrayInt.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -9,35 +9,32 @@ function generatePhoneNumber(arrayInt) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  let ddd = `(${arrayInt[0]}${arrayInt[1]})`;
-  let corpo1 = '';
-  let corpo2 = '';
-  for (let index = 2; index <= 6; index += 1) {
-    corpo1 += arrayInt[index];
+  let stringNumeros = '';
+  for (let number of arrayInt) {
+    stringNumeros += number;
   }
-  for (let index2 = 7; index2 <= 10; index2 += 1) {
-    corpo2 += arrayInt[index2];
-  }
-  let numeroFinal = `${ddd} ${corpo1}-${corpo2}`;
+  let numeroFinal = `(${stringNumeros.substring(0, 2)}) ${stringNumeros.substring(2, 7)
+  }-${stringNumeros.substring(7)}`;
   return numeroFinal;
 }
 
 // Desafio 12
-// eslint-disable-next-line max-lines-per-function , complexity , sonarjs/cognitive-complexity
 function triangleCheck(lineA, lineB, lineC) {
-  let condicaoA = false;
-  let condicaoB = false;
-  let condicaoC = false;
-  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
-    condicaoA = true;
+  let listaLine = [lineA, lineB, lineC];
+  let condicaoTotal = true;
+  for (let index = 1; index <= 3; index += 1) {
+    if (listaLine[0] > listaLine[1] + listaLine[2]
+      || listaLine[0] < Math.abs(listaLine[1] - listaLine[2])) {
+      condicaoTotal = false;
+    }
+    let apoio = listaLine[0];
+    let apoio2 = listaLine[1];
+    let apoio3 = listaLine[2];
+    listaLine[0] = apoio2;
+    listaLine[1] = apoio3;
+    listaLine[2] = apoio;
   }
-  if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
-    condicaoB = true;
-  }
-  if (lineC < lineB + lineA && lineC > Math.abs(lineB - lineA)) {
-    condicaoC = true;
-  }
-  return (condicaoA && condicaoB && condicaoC);
+  return condicaoTotal;
 }
 
 // Desafio 13
