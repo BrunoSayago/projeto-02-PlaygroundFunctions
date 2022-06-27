@@ -1,8 +1,9 @@
-//primeiro commit
-
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(par1, par2) {
+  if (par1 === true && par2 === true) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 2
