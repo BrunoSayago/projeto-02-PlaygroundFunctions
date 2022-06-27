@@ -53,8 +53,21 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// eslint-disable-next-line complexity
+function fizzBuzz(arrayInt) {
+  let newArray = [];
+  for (let numero of arrayInt) {
+    if (numero % 5 === 0 && numero % 3 === 0) {
+      newArray.push('fizzBuzz');
+    } else if (numero % 3 === 0) {
+      newArray.push('fizz');
+    } else if (numero % 5 === 0) {
+      newArray.push('buzz');
+    } else {
+      newArray.push('bug!');
+    }
+  }
+  return newArray;
 }
 
 // Desafio 9
