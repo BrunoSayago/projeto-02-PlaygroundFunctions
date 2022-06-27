@@ -19,9 +19,7 @@ function splitSentence(string1) {
 
 // Desafio 4
 function concatName(arrayString) {
-  // eslint-disable-next-line prefer-template , no-undef
-  stringNova = arrayString[arrayString.length - 1] + ', ' + arrayString[0];
-  // eslint-disable-next-line no-undef
+  let stringNova = `${arrayString[arrayString.length - 1]}, ${arrayString[0]}`;
   return stringNova;
 }
 
@@ -53,7 +51,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-// eslint-disable-next-line complexity
+// eslint-disable-next-line complexity , sonarjs/cognitive-complexity
 function fizzBuzz(arrayInt) {
   let newArray = [];
   for (let numero of arrayInt) {
@@ -71,11 +69,27 @@ function fizzBuzz(arrayInt) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string2) {
+  let palavraCodificada = string2;
+  let vogais = 'aeiou';
+  let index = 1;
+  for (let letra of vogais) {
+    palavraCodificada = palavraCodificada.replaceAll(letra, index);
+    index += 1;
+  }
+  return palavraCodificada;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string3) {
+  let palavraDecodificada = string3;
+  let numeros = '12345';
+  let vogais = 'aeiou';
+  let index = 0;
+  for (let letra of numeros) {
+    palavraDecodificada = palavraDecodificada.replaceAll(letra, vogais[index]);
+    index += 1;
+  }
+  return palavraDecodificada;
 }
 
 // Desafio 10
