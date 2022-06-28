@@ -1,21 +1,33 @@
 // Desafio 11
-// eslint-disable-next-line complexity , sonarjs/cognitive-complexity
-function generatePhoneNumber(arrayInt) {
-  if (arrayInt.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  }
-  for (let numero of arrayInt) {
-    if (numero < 0 || numero > 9 || arrayInt.filter((number) => number === numero).length >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-  }
+
+function tranformaNumero(arrayInt1) {
   let stringNumeros = '';
-  for (let number of arrayInt) {
+  for (let number of arrayInt1) {
     stringNumeros += number;
   }
   let numeroFinal = `(${stringNumeros.substring(0, 2)}) ${stringNumeros.substring(2, 7)
   }-${stringNumeros.substring(7)}`;
   return numeroFinal;
+}
+
+function confereCondicao2(arrayInt2) {
+  let numeroEValido = true;
+  for (let numero of arrayInt2) {
+    if (numero < 0 || numero > 9 || arrayInt2.filter((number) => number === numero).length >= 3) {
+      numeroEValido = false;
+    }
+  }
+  return numeroEValido;
+}
+
+function generatePhoneNumber(arrayInt) {
+  if (arrayInt.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  if (confereCondicao2(arrayInt) === false) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  return tranformaNumero(arrayInt);
 }
 
 // Desafio 12
