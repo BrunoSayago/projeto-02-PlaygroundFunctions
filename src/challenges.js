@@ -50,19 +50,25 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arrayInt) {
-  for (let number of arrayInt) {
-    if (number % 15 === 0) {
-      arrayInt[arrayInt.indexOf(number)] = 'fizzBuzz';
-    } else if (number % 3 === 0) {
-      arrayInt[arrayInt.indexOf(number)] = 'fizz';
-    } else if (number % 5 === 0) {
-      arrayInt[arrayInt.indexOf(number)] = 'buzz';
-    } else {
-      arrayInt[arrayInt.indexOf(number)] = 'bug!';
-    }
+function confereFizzBuzz(numero) {
+  if (numero % 5 === 0 && numero % 3 === 0) {
+    return 'fizzBuzz';
   }
-  return arrayInt;
+  if (numero % 5 === 0) {
+    return 'buzz';
+  }
+  if (numero % 3 === 0) {
+    return 'fizz';
+  }
+  return 'bug!';
+}
+
+function fizzBuzz(arrayInt) {
+  let newArray = [];
+  for (let number of arrayInt) {
+    newArray.push(confereFizzBuzz(number));
+  }
+  return newArray;
 }
 
 // Desafio 9
@@ -117,4 +123,4 @@ module.exports = {
   highestCount,
   splitSentence,
   techList,
-}
+};
