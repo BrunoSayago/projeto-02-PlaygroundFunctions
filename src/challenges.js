@@ -50,21 +50,19 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-// eslint-disable-next-line complexity , sonarjs/cognitive-complexity
 function fizzBuzz(arrayInt) {
-  let newArray = [];
-  for (let numero of arrayInt) {
-    if (numero % 5 === 0 && numero % 3 === 0) {
-      newArray.push('fizzBuzz');
-    } else if (numero % 3 === 0) {
-      newArray.push('fizz');
-    } else if (numero % 5 === 0) {
-      newArray.push('buzz');
+  for (let number of arrayInt) {
+    if (number % 15 === 0) {
+      arrayInt[arrayInt.indexOf(number)] = 'fizzBuzz';
+    } else if (number % 3 === 0) {
+      arrayInt[arrayInt.indexOf(number)] = 'fizz';
+    } else if (number % 5 === 0) {
+      arrayInt[arrayInt.indexOf(number)] = 'buzz';
     } else {
-      newArray.push('bug!');
+      arrayInt[arrayInt.indexOf(number)] = 'bug!';
     }
   }
-  return newArray;
+  return arrayInt;
 }
 
 // Desafio 9
@@ -119,4 +117,4 @@ module.exports = {
   highestCount,
   splitSentence,
   techList,
-};
+}
