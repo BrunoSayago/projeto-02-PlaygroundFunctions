@@ -1,13 +1,24 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Projeto 2 - Playground Functions
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+Oi. Este foi um dos projetos que eu fiz durante meu curso na Trybe. Confira os detalhes dele abaixo.
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+
+
+
+## Nome do Projeto
+Playground Functions
+
+## Linguagens e Ferramentas Utilizadas
+
+ - JavaScript
+
+
+## Objetivos do Projeto
+O objetivo deste projeto foi colocar em prática o conhecimento básico adquirido sobre JavaScript. Foram desenvolvidos, ao todo, 13 funções diferentes, que contêm lógicas de programação básicas implementadas com a linguagem JavaScript.
+
+## Instruções para visualização
+Comando para clonar o projeto:
+ - `git clone git@github.com:BrunoSayago/projeto-02-PlaygroundFuntions.git`
+ 
+Se necessário, instalar as dependências:
+ - `npm install`
