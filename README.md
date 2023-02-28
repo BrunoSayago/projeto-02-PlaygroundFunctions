@@ -18,7 +18,7 @@ O objetivo deste projeto foi colocar em prática o conhecimento básico adquirid
 
 ## Instruções para visualização
 Comando para clonar o projeto:
- - `git clone git@github.com:BrunoSayago/projeto-02-PlaygroundFuntions.git`
+ - `git clone git@github.com:BrunoSayago/projeto-02-PlaygroundFunctions.git`
  
 Se necessário, instalar as dependências:
  - `npm install`
